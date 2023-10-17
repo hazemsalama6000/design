@@ -1,0 +1,109 @@
+@font-face {
+    font-family: cairo-font;
+    src: url(../fonts//cairo-font//CairoPlay-VariableFont_slnt\,wght.ttf);
+}
+
+
+body {
+    font-family: cairo-font;
+}
+
+.search-box {
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    left: -300px;
+    top: 0px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.search-box .setting-icon {
+    padding: 15px;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    right: -45px;
+}
+
+.search-box.open-close {
+    left: 0;
+}
+
+
+
+.langing-page {
+    min-height: 100vh;
+    background-image: url('../imgs/1.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.langing-page .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.logo {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header-area .links {
+    list-style: none;
+    text-align: right;
+}
+
+.links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+    transition: 1;
+}
+
+.links li a:hover,
+.links li a.active {
+    color: rgb(255, 163, 43);
+}
+
+.introduction-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    font-size: 17px;
+    line-height: 1.6;
+
+}
+
+.introduction-text h1 {
+    font-size: 40px;
+}
+
+.introduction-text h1 span {
+    color: rgb(255, 163, 43);
+}
