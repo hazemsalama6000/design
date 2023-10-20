@@ -96,3 +96,15 @@ function runRandomBackgrounds(isRun) {
         clearInterval(randomBackgroundInterval);
     }
 }
+
+
+let skills = document.querySelector('.skills');
+let spans = document.querySelectorAll('.skills .skill-box .progress-bar span');
+
+window.onscroll = function () {
+    if (this.pageYOffset > (skills.offsetTop + skills.offsetHeight - window.innerHeight) - 100) {
+        spans.forEach((spanItem) => {
+            spanItem.style.width = spanItem.dataset.progress;
+        });
+    }
+}

@@ -1,7 +1,8 @@
 :root {
     --main-color: rgb(255, 163, 43);
 }
-*{
+
+* {
     box-sizing: border-box;
 }
 
@@ -13,6 +14,11 @@
 
 body {
     font-family: cairo-font;
+}
+
+.container {
+    margin: auto;
+    width: 1300px;
 }
 
 .search-box {
@@ -68,22 +74,22 @@ body {
     background-color: chartreuse;
 }
 
-.search-box .setting-option.background{
+.search-box .setting-option.background {
     padding: 29px;
 }
 
-.search-box .setting-option span{
-  background-color: #4f8775;
-  border-radius: 4px;
-  padding: 1px 10px;
-  color: white;
-  cursor: pointer;
-  box-shadow: 5px 5px 8px #fff;
-  opacity: 0.5;
+.search-box .setting-option span {
+    background-color: #4f8775;
+    border-radius: 4px;
+    padding: 1px 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px #fff;
+    opacity: 0.5;
 }
 
-.search-box .setting-option span.active{
-   opacity: 1;
+.search-box .setting-option span.active {
+    opacity: 1;
 }
 
 
@@ -176,3 +182,104 @@ body {
 .introduction-text h1 span {
     color: var(--main-color);
 }
+
+.about-us {
+    display: flex;
+    padding: 50px 25px 50px 25px;
+}
+
+.about-us .info-box {
+    flex: 1;
+}
+
+.about-us .info-box h1 {
+    color: var(--main-color);
+    margin: 0px 0px;
+}
+
+.about-us .info-box p {
+    line-height: 2;
+}
+
+.about-us .about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-us .about-image img {}
+
+
+/* start skills */
+
+.skills {
+    background-color: #dbd7d7;
+    padding: 50px 25px;
+}
+
+.skills h2 {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.skills .skill-box {
+    display: flex;
+    background-color: white;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.skills .skill-box .skill-name {
+    margin: 0px 15px 0px 0px;
+    line-height: 30px;
+    width: 100px;
+}
+
+.skills .skill-box .progress-bar {
+    background-color: #dbd7d7;
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: start;
+    overflow: hidden;
+}
+
+
+.skills .skill-box .progress-bar span {
+    width: 0px;
+    height: 30px;
+    background-color: var(--main-color);
+    display: inline-block;
+    transition: 0.9s;
+}
+
+/* end skills */
+
+
+/* start images gallery */
+.images-gallery {
+    margin-top: 46px;
+    text-align: center;
+}
+
+.images-gallery .gallery-title {
+    text-align: center;
+    color: var(--main-color);
+    padding: 26px;
+
+}
+
+
+.images-gallery .images-box {
+
+}
+
+.images-gallery .images-box img {
+    width: 300px;
+    border: 1px solid rgb(140, 138, 138);
+    background-color: gray;
+    padding: 5px;
+    margin-left: 7px;
+}
+
+/* end images gallery */
