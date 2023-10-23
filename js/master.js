@@ -108,3 +108,43 @@ window.onscroll = function () {
         });
     }
 }
+
+
+// make imgs clickable
+
+let imgsBox = document.querySelectorAll('.images-box img');
+
+imgsBox.forEach((img) => {
+
+    img.addEventListener('click', function () {
+        let overlay = document.createElement('div');
+        overlay.className = 'overlay-popup';
+        document.body.appendChild(overlay);
+
+        let popupImage = document.createElement('div');
+        popupImage.className = 'img-popup';
+
+        let header = document.createElement('h1');
+        header.innerHTML = img.alt;
+        popupImage.appendChild(header);
+
+        let closebtn = document.createElement('span');
+        closebtn.innerHTML = 'X';
+        popupImage.appendChild(closebtn);
+
+        let dynamicImage = document.createElement('img');
+        dynamicImage.style.width = '1000px';
+        dynamicImage.style.height = '300px';
+        dynamicImage.src = img.src;
+        popupImage.appendChild(dynamicImage);
+
+        document.body.appendChild(popupImage);
+
+        closebtn.addEventListener('click',function(e){
+             e.target.parentNode.remove();
+             document.querySelector('.overlay-popup').remove();
+        });
+
+    });
+
+});
