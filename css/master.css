@@ -568,8 +568,37 @@ overlay popup
     float: left;
 }
 
-.testimonials .test-box:not(:last-of-type){
+.testimonials .test-box{
     margin-right: 1%;
+    padding: 13px;
 }
+
+.testimonials .test-box > p {
+    line-height: 1.7;
+    font-style: italic;
+    color: #777;
+}
+
+.testimonials .test-box .persona-info{
+
+}
+
+.testimonials .test-box .persona-info img{
+    float: left;
+    border-radius: 50%;
+}
+
+.testimonials .test-box .persona-info h3{
+    padding-top: 11px;
+    padding-left: 105px;
+    margin-bottom: 5px;
+}
+
+.testimonials .test-box .persona-info p{
+    padding-left: 105px;
+    margin-top: 0px;
+    color: 777;
+}
+
 
 /* testimonials end */
