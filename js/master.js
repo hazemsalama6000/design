@@ -140,11 +140,43 @@ imgsBox.forEach((img) => {
 
         document.body.appendChild(popupImage);
 
-        closebtn.addEventListener('click',function(e){
-             e.target.parentNode.remove();
-             document.querySelector('.overlay-popup').remove();
+        closebtn.addEventListener('click', function (e) {
+            e.target.parentNode.remove();
+            document.querySelector('.overlay-popup').remove();
         });
 
     });
 
 });
+
+
+//events for bullet
+
+let bullets = document.querySelectorAll('.bullet .bullet-box');
+
+bullets.forEach((item) => {
+    item.addEventListener('click', function (e) {
+        document.querySelector(e.target.dataset.section).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+// menu toggle
+
+let toggle = document.querySelector('.toggle-button');
+let links = document.querySelector('.links');
+
+toggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    links.classList.toggle('open');
+});
+
+links.addEventListener('click',function(e){
+  e.stopPropagation();
+});
+
+document.addEventListener('click',function(e){
+    if(e.target != toggle && e.target != links){
+         links.classList.remove('open');
+    }
+})
