@@ -688,6 +688,7 @@ overlay popup
     min-height: 600px;
     position: relative;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
@@ -726,12 +727,18 @@ overlay popup
     width: calc(97% / 3);
     padding: 10px;
     float: left;
-}
-
-.testimonials .test-box {
     margin-right: 1%;
     padding: 13px;
 }
+
+@media (max-width:620px) {
+    .testimonials .test-box {
+        width: 80%;
+        float: none;
+        margin: 10px auto;
+    }
+}
+
 
 .testimonials .test-box>p {
     line-height: 1.7;
@@ -741,9 +748,22 @@ overlay popup
 
 .testimonials .test-box .persona-info {}
 
+@media (max-width:900px) {
+    .testimonials .test-box .persona-info {
+        text-align: center;
+    }
+}
+
+
 .testimonials .test-box .persona-info img {
     float: left;
     border-radius: 50%;
+}
+
+@media (max-width:900px) {
+    .testimonials .test-box .persona-info img {
+        float: none;
+    }
 }
 
 .testimonials .test-box .persona-info h3 {
@@ -752,12 +772,27 @@ overlay popup
     margin-bottom: 5px;
 }
 
+@media (max-width:900px) {
+    .testimonials .test-box .persona-info h3 {
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
+}
+
 .testimonials .test-box .persona-info p {
     padding-left: 105px;
     margin-top: 0px;
     color: 777;
 }
 
+@media (max-width:900px) {
+    .testimonials .test-box .persona-info p {
+        padding-left: 0px;
+        margin-top: 11px;
+        color: 777;
+    }
+}
 
 /* testimonials end */
 
@@ -848,10 +883,26 @@ overlay popup
     width: 45%;
 }
 
+@media(max-width:580px) {
+    .contact .left {
+        float: none;
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+
 .contact .right {
     float: right;
     position: relative;
     width: 50%;
+}
+
+@media (max-width:580px) {
+    .contact .right {
+        float: none;
+        width: 80%;
+        margin: 0px auto;
+    }
 }
 
 .contact .left,
